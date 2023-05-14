@@ -4,7 +4,6 @@
 #include <string>
 template<typename T, int capacity>
 class TPQueue {
-
  private:
      T* synonymous_array;
      int capacityMax;
