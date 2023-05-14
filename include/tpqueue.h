@@ -4,6 +4,7 @@
 #include <string>
 template<typename T, int capacity>
 class TPQueue {
+
  private:
      T* synonymous_array;
      int capacityMax;
@@ -13,12 +14,15 @@ class TPQueue {
      TPQueue() : capacityMax(capacity), first_index(0), last_index(0), count(0) {
         synonymous_array = new T[capacityMax + 1];
      }
+     
      bool isEmpty() const {
          return count == 0;
      }
+     
      bool isFull() const {
          return count == capacity;
      }
+     
      void push(const T& value) {
          if (isFull()) {
              throw std::string("Queue is full");
